@@ -1,6 +1,8 @@
-package br.edu.unoesc.exemplo_H2.model;
+package br.edu.unoesc.lista.model;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
+import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -15,14 +17,14 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class Livro implements Serializable {
+public class Aluno implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	Integer id;
+	Long id;
 	
-	String titulo;
-	Integer paginas;
-	String autor;
+	String nome;
+	BigDecimal salario;
+	Date nascimento;
 }
